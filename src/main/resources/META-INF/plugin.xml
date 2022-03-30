@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>org.example.procyon-framework-jetbrains-plugin</id>
+    <name>Procyon Framework Support</name>
+    <vendor email="burakkokenn@gmail.com" url="http://www.github.com/burakkoken">Burak Koken</vendor>
+
+    <description><![CDATA[
+        This plugin supports Procyon Framework Support for Jetbrains products.
+    ]]></description>
+
+    <idea-version since-build="203.0"/>
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.go</depends>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.plugins.go</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <moduleBuilder builderClass="com.github.procyonproject.wizard.GoProcyonProjectModuleBuilder"/>
+        <directoryProjectGenerator implementation="com.github.procyonproject.wizard.GoProcyonProjectGenerator"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
