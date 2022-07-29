@@ -16,8 +16,10 @@
     <depends>org.jetbrains.plugins.go</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <moduleBuilder builderClass="com.github.procyonproject.wizard.GoProcyonProjectModuleBuilder"/>
-        <directoryProjectGenerator implementation="com.github.procyonproject.wizard.GoProcyonProjectGenerator"/>
+        <iconProvider implementation="com.github.procyonprojects.ide.ProcyonIconProvider"/>
+        <moduleBuilder builderClass="com.github.procyonprojects.ide.ProcyonModuleBuilder"/>
+        <directoryProjectGenerator implementation="com.github.procyonprojects.ide.ProcyonProjectGenerator"/>
+        <!-- stepsBeforeRunProvider -->
     </extensions>
 
     <actions>
